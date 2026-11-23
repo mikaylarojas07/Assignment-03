@@ -4,11 +4,11 @@ let assignmentModel = mongoose.Schema({
     type: String, 
     courseCode: String, 
     description: String, 
-    dueDate: String, 
+    dueDate: Date, 
     priorityLevel: String
 }, 
 {
-    Collection: "Assignments"
+    collection: "Assignments"
 });
 
 module.exports=mongoose.model('Assignment', assignmentModel);
