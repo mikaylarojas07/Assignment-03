@@ -1,3 +1,52 @@
 <%- include partials/header.ejs %>
-    <h1>Your Assignments</h1>
+    <main class="container">
+    <div class="row">
+        <div class="offset-md-1 col-md-10">
+            <h1>Your Assignments</h1>
+                <a href="/assignments/create" class="btn btn-primary" role="button">
+                    <i class="fas fa-plus-circle"></i> Add an Assignment
+                </a>
+                <br>
+                <br>
+            <table class="table table-bordered table-striped table-hover">
+                <!--Header Row-->
+                <tr>
+                    <th class="text-center col-2">Type of Assignment</th>
+                    <th class="text-center col-2">Course Code</th>
+                    <th class="text-center col-1">Description</th>
+                    <th class="col-4">Due Date</th>
+                    <th class="text-center col-1">Priority Level</th>
+                </tr>
+                <!--Columns-->
+                <% for(let count=0;count<Assignmentlist.length;count++) { %>
+                    <tr>
+                        <td class="text-center col-2"><%= Assignmentlist[count].type %></td>
+                        <td class="text-center col-2"><%= Assignmentlist[count].courseCode %></td>
+                        <td class="text-center col-1"><%= Assignmentlist[count].description %></td>
+                        // from stack overflow, see readme
+                        <td class="col-4"><%= Assignmentlist[count].dueDate.toISOString().split('T')[0] %></td>
+                        <td class="text-center col-1"><%= Assignmentlist[count].priorityLevel %></td>
+                        
+                        <td class="text-center col-1">
+                            <a href="/assignments/edit/<%= Assignmentlist[count]._id %>" 
+                                class="btn btn-primary btn-sm">
+                                <i class="fas fa-pencil-alt"></i> Edit</a>
+                        </td>
+                        <td class="text-center col-1">
+                            //mention source for return confirm line in readme
+                            <a href="/assignments/delete/<%= Assignmentlist[count]._id %>" 
+                                class="btn btn-danger btn-sm"
+                                onclick="return confirm('Are you sure?')">
+                                
+                                <i class="fas fa-check"></i> Mark as Done</a>
+                        </td>
+                       
+                    </tr>
+                    <% } %>
+            </table>
+        </div>
+    </div>
+</main>
+
+
 <%- include partials/footer.ejs %>
