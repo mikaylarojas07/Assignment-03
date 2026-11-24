@@ -1,3 +1,57 @@
 <%- include partials/header.ejs %>
-    <h1>Add a new assignment</h1>
+
+<div class="container mb-5 pb-5"> <!--Adds margins and padding to the bottom of the container div, Bootstrap styling-->
+    <div class="row mb-4">
+        <div class="offset-md-3 col-md-6 text-center">
+            <a href="/assignments" class="btn btn-primary" role="button"> <i class="fas fa-arrow-left"></i> Back to Assignments</a>
+        </div>
+      </div>
+            <h1>Add a new assignment</h1>
+            <form class="form" method="post"> <!--Creating the form that will be used to create lost item reports-->
+                <div class="form-group"> <!--Using Bootstrap styling here as well -->
+                    <label for="type">Assignment Type</label>
+                    <input type="text" class="form-control" id="type"
+                    placeholder="Test, assignment, quiz, essay"
+                    name="type" required>
+                </div>
+                <div class="form-group">
+                    <label for="courseCode">Course Code</label>
+                    <input type="text" class="form-control" id="courseCode"
+                    placeholder="eg. INFR3120"
+                    name="courseCode" required>
+                </div>
+                <div class="form-group">
+                    <label for="description">Assignment Description</label>
+                    <textarea type="text" class="form-control" id="description"
+                    placeholder="Enter the assignment description"
+                    name="description" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="dueDate">Due Date</label>
+                    <input type="date" class="form-control" id="dueDate"
+                    name="dueDate" required>
+                </div>
+                <!--cite or find lecture-->
+                <div class="form-group">
+                    <label for="priorityLevel">Priority Level</label>
+                    <select class="form-control" id="priorityLevel" name="priorityLevel" required>
+                        <option value="Low">Low</option>
+                        <option value="Medium">Medium</option>
+                        <option value="High">High</option>
+                    </select>
+                    
+                </div>
+                <!--Submit and cancel buttons (Bootstrap)-->
+                <button class="btn btn-primary" type="submit">
+                    <!--Icons from fontawesome-free-->
+                    <i class="fas fa-edit"></i> Add Assignment
+                </button>
+                <a href="/assignments" class="btn btn-warning">
+                    <i class="fas fa-undo"></i>Cancel
+                </a>
+            </form>
+        </div>
+    </div>
+</div>
+
 <%- include partials/footer.ejs %>

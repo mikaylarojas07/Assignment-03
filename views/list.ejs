@@ -23,7 +23,7 @@
                         <td class="text-center col-2"><%= Assignmentlist[count].type %></td>
                         <td class="text-center col-2"><%= Assignmentlist[count].courseCode %></td>
                         <td class="text-center col-1"><%= Assignmentlist[count].description %></td>
-                        // from stack overflow, see readme
+                        <!--from stack overflow, see readme-->
                         <td class="col-4"><%= Assignmentlist[count].dueDate.toISOString().split('T')[0] %></td>
                         <td class="text-center col-1"><%= Assignmentlist[count].priorityLevel %></td>
                         
@@ -33,7 +33,7 @@
                                 <i class="fas fa-pencil-alt"></i> Edit</a>
                         </td>
                         <td class="text-center col-1">
-                            //mention source for return confirm line in readme
+                            <!--mention source for return confirm line in readme-->
                             <a href="/assignments/delete/<%= Assignmentlist[count]._id %>" 
                                 class="btn btn-danger btn-sm"
                                 onclick="return confirm('Are you sure?')">
