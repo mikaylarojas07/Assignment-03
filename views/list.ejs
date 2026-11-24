@@ -34,8 +34,9 @@
                         </td>
                         <td class="text-center col-1">
                             <!--mention source for return confirm line in readme-->
+                            <!--Added custom class delete-btn to apply CSS styling to this unique button only-->
                             <a href="/assignments/delete/<%= Assignmentlist[count]._id %>" 
-                                class="btn btn-danger btn-sm"
+                                class="btn btn-primary btn-sm delete-btn"
                                 onclick="return confirm('Are you sure?')">
                                 
                                 <i class="fas fa-check"></i> Mark as Done</a>

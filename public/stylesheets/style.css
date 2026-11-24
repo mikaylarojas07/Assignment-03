@@ -1,8 +1,32 @@
-body {
-  font-family: serif;
+h1, .header-navbar {
+  font-family: "Playwrite BE VLG", cursive;
 }
 
 img{
   border: 3px solid lightpink;
   border-radius: 50%;
 }
+
+.btn-primary, .btn-warning{
+  background-color: pink;
+  border-width: 3px;
+  border-color: peachpuff;
+  color: white;
+  margin-top: 20px;
+}
+
+.btn-primary:hover{
+  background-color: purple;
+}
+
+.delete-btn{
+  background-color: green;
+}
+
+form{
+  padding-top:10px;
+  }
+
+  .header-navbar{
+    background-color: peachpuff;
+  }

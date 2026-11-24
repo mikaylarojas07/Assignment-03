@@ -42,3 +42,5 @@ Bootstrap navbar code (adapted from lecture) https://getbootstrap.com/docs/5.0/c
     </div>
   </div>
 </nav>
+
+Google Fonts embed code from: https://fonts.google.com/selection/embed

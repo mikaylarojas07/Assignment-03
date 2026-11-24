@@ -2,14 +2,19 @@
 <html>
   <head>
     <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
     <link rel= "stylesheet" href="/bootstrap/dist/css/bootstrap.min.css"/> 
     <link rel="stylesheet" href="/@fortawesome/fontawesome-free/css/all.min.css"/>
     <script src="bootstrap/dist/js/bootstrap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+BE+VLG:wght@100..400&display=swap" rel="stylesheet">
+    <!--Loading CSS stylesheet AFTER botostrap, to override the bootstrap code-->
+    <link rel='stylesheet' href='/stylesheets/style.css' />
   </head> 
 
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <!--Added custom class header-navbar to call in CSS styling to only apply to navbar, not the footer as well-->
+    <nav class="navbar navbar-expand-lg header-navbar">
       <div class="container-fluid">
         <a class="navbar-brand" href="/">TrackIt</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
