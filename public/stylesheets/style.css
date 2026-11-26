@@ -1,3 +1,7 @@
+body{
+  background-color: #fff7f2;
+  color: #4A2040;
+}
 h1, .header-navbar {
   font-family: "Playwrite BE VLG", cursive;
 }
@@ -8,16 +12,11 @@ img{
 }
 
 .btn-primary, .btn-warning{
-  background-color: pink;
+  background-color: #C2477A;
   border-width: 3px;
   border-color: white;
   color: white;
   margin-top: 20px;
-}
-
-.btn-primary:hover{
-  background-color: pink;
-  border-color: black;
 }
 
 .btn-view{
@@ -29,25 +28,31 @@ img{
 }
 
 .delete-btn{
-  background-color: rgb(87, 230, 87);
+  background-color: #8FD0A8;
+  color:#4A2040;
+}
+
+.btn-back{
+  background-color: #4A2040;
 }
 
 form{
   padding-top:10px;
 }
 
-  .header-navbar{
-    background-color: peachpuff;
-  }
+.header-navbar{
+  background-color: peachpuff;
+}
 
-  .footer-navbar{
-    background-color: rgb(231, 187, 243);
-    font-family: serif;
-  }
+.footer-navbar{
+  background-color: peachpuff;
+  font-family: serif;
+}
 
-  .edit-btn{
-    background-color: rgb(231, 187, 243);
-  }
+.edit-btn{
+  background-color: rgb(231, 187, 243);
+  color:#4A2040
+}
 
 
   
