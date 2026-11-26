@@ -3,30 +3,52 @@ h1, .header-navbar {
 }
 
 img{
-  border: 3px solid lightpink;
+  border: 3px solid pink;
   border-radius: 50%;
 }
 
 .btn-primary, .btn-warning{
   background-color: pink;
   border-width: 3px;
-  border-color: peachpuff;
+  border-color: white;
   color: white;
   margin-top: 20px;
 }
 
 .btn-primary:hover{
-  background-color: purple;
+  background-color: pink;
+  border-color: black;
+}
+
+.btn-view{
+  background-color: rgb(239, 125, 161);
+}
+
+.btn-add{
+  background-color: rgb(239, 125, 161);
 }
 
 .delete-btn{
-  background-color: green;
+  background-color: rgb(87, 230, 87);
 }
 
 form{
   padding-top:10px;
-  }
+}
 
   .header-navbar{
     background-color: peachpuff;
   }
+
+  .footer-navbar{
+    background-color: rgb(231, 187, 243);
+    font-family: serif;
+  }
+
+  .edit-btn{
+    background-color: rgb(231, 187, 243);
+  }
+
+
+  
+  
