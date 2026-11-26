@@ -1,3 +1,66 @@
 <%- include partials/header.ejs %>
-    <h1>Edit Assignment</h1>
+<container class="row offset-md-3"></container>
+<div class="container mb-5 pb-5">
+    <div class="row mb-4">
+        <div class="offset-md-3 col-md-6 text-center">
+            <!--Redirects users back to lost item logs -> /items (list.ejs)-->
+            <a href="/assignments" class="btn btn-primary" role="button"> <i class="fas fa-arrow-left"></i> Back to Assignments</a>
+        </div>
+      </div>
+            <h1>Edit Assignment</h1> <!--New header to establish difference from create page-->
+            <form class="form" method="post">
+                <!--New property "value" to populate the current value associated with the object, for simple and quick editing-->
+                <div class="form-group">
+                    <label for="typeTextField">Type of Assignment</label>
+                    <input type="text" class="form-control" id="typeTextField"
+                    placeholder="Enter the type of assignment"
+                    name="type" 
+                    value="<%=assignment.type%>"
+                    required>
+                </div>
+
+                <div class="form-group">
+                    <label for="courseCodeTextField">Course Code</label>
+                    <input type="text" class="form-control" id="courseCodeTextField"
+                    placeholder="Enter the course code" name="courseCode"
+                    value="<%=assignment.courseCode%>"
+                    required></input>
+                </div>
+                <div class="form-group">
+                    <label for="assignmentDescription">Assignment Description</label>
+                    <textarea type="text" class="form-control" id="assignmentDescription"
+                    placeholder="What are the details of the test/assignment/report?"
+                    name="description" 
+                    required><%=assignment.description%></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="dateTextField">Due Date</label>
+                    <input type="date" class="form-control" id="dateTextField"
+                    name="dueDate" 
+                    <%#Converts the date input to a string that is formatted like yyyy-mm-dd%>
+                    <%#Code adapted from Stack Overflow (see README for details and link)%>
+                    value="<%=assignment.dueDate.toISOString().split('T')[0]%>"
+                    required>
+                </div>
+                <div class="form-group">
+                    <label for="priorityLevelSelect">Priority Level</label>
+                    <input type="email" class="form-control" id="priorityLevelSelect"
+                    placeholder="Low, medium, or high?"
+                    name="priorityLevel" 
+                    value="<%=assignment.priorityLevel%>"
+                    required>
+                </div>
+                <!--Changed text on submit button to "Update"-->
+                <button class="btn btn-primary" type="submit">
+                    <i class="fas fa-edit"></i> Update
+                </button>
+                <a href="/assignments" class="btn btn-warning">
+                    <i class="fas fa-undo"></i>Cancel
+                </a>
+            </form>
+        </div>
+    </div>
+</div>
+
+
 <%- include partials/footer.ejs %>
