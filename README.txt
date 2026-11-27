@@ -42,11 +42,25 @@ MONGODB_URI=mongodb+srv://<username>:<password>@jons-thoughts.xpo8p.mongodb.net/
 In app.js: 
 mongoose.connect(process.env.MONGODB_URI)
 
+Citation #6: 
 Stack Overflow code for converting date input to a formatted string (implemented on edit.ejs and list.ejs): 
 https://stackoverflow.com/questions/28729634/set-values-in-input-type-date-and-time-in-javascript/58252034?utm_source=chatgpt.com
 
 EXAMPLE CODE FROM STACK OVERFLOW: 
 let dateInputFormatted = tmp.toISOString().split('T')[0];
 
+Citation #7: 
+Stack Overflow code for prompting a confirm box when deleting: 
+https://stackoverflow.com/questions/9139075/how-to-show-a-confirm-message-before-delete
+
+My code (adapted from Stack):
+ <td class="text-center col-1">
+    <!--Added custom class delete-btn to apply CSS styling to this unique button only (I do this multiple times throughout my code)-->
+      <a href="/assignments/delete/<%= Assignmentlist[count]._id %>" 
+      class="btn btn-primary btn-sm delete-btn"
+      onclick="return confirm('Are you sure you want to mark this assignment as Done? This will remove the assignment from the database.')">
+      <i class="fas fa-check"></i> Mark as Done</a>
+  </td>
+  
 Citation #6: 
 Fontawesome free icons used from https://www.npmjs.com/package/@fortawesome/fontawesome-free

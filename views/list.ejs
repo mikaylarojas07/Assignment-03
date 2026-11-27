@@ -1,13 +1,18 @@
+<!--Page displaying every assignment from Assignments collection-->
+
 <%- include partials/header.ejs %>
     <main class="container">
     <div class="row">
+        <!--Bootstrap logic, centres the content with small margins-->
         <div class="offset-md-1 col-md-10">
             <h1>Your Assignments</h1>
+                <!--Button to fo to create form-->
                 <a href="/assignments/create" class="btn btn-primary" role="button">
                     <i class="fas fa-plus-circle"></i> Add an Assignment
                 </a>
                 <br>
                 <br>
+                <!--Bootstrap table classes: bordered cells, striped rows, hover highlight-->
             <table class="table table-bordered table-striped table-hover">
                 <!--Header Row-->
                 <tr>
@@ -18,27 +23,29 @@
                     <th class="text-center col-1">Priority Level</th>
                 </tr>
                 <!--Columns-->
+                <!--Loop through Assignmentlist array: one table row is created per assignment document-->
                 <% for(let count=0;count<Assignmentlist.length;count++) { %>
                     <tr>
+                        <!--EJS output tag prints the valye of each field for the current assignment-->
                         <td class="text-center col-2"><%= Assignmentlist[count].type %></td>
                         <td class="text-center col-2"><%= Assignmentlist[count].courseCode %></td>
                         <td class="text-center col-5"><%= Assignmentlist[count].description %></td>
                         <!--from stack overflow, see readme-->
+                        <!--.toISOString().split('T')[0] turns the stored Date into a simple yyyy-mm-dd string, a more readable format-->
                         <td class="col-1"><%= Assignmentlist[count].dueDate.toISOString().split('T')[0] %></td>
                         <td class="text-center col-1"><%= Assignmentlist[count].priorityLevel %></td>
                         
                         <td class="text-center col-1">
+                            <!--Link to the edit form under the name Update-->
                             <a href="/assignments/edit/<%= Assignmentlist[count]._id %>" 
                                 class="btn btn-primary btn-sm edit-btn">
                                 <i class="fas fa-pencil-alt"></i> Update</a>
                         </td>
                         <td class="text-center col-1">
-                            <!--mention source for return confirm line in readme-->
-                            <!--Added custom class delete-btn to apply CSS styling to this unique button only-->
+                            <!--Added custom class delete-btn to apply CSS styling to this unique button only (I do this multiple times throughout my code)-->
                             <a href="/assignments/delete/<%= Assignmentlist[count]._id %>" 
                                 class="btn btn-primary btn-sm delete-btn"
                                 onclick="return confirm('Are you sure you want to mark this assignment as Done? This will remove the assignment from the database.')">
-                                
                                 <i class="fas fa-check"></i> Mark as Done</a>
                         </td>
                        
