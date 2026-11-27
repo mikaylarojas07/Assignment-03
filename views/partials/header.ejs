@@ -1,3 +1,5 @@
+<!--shared header: included at the top of every page-->
+<!--Contains the <head> (stylesheets, fonts,), the navbar, and the logo-->
 <!DOCTYPE html>
 <html>
   <head>
@@ -5,10 +7,11 @@
     <link rel= "stylesheet" href="/bootstrap/dist/css/bootstrap.min.css"/> 
     <link rel="stylesheet" href="/@fortawesome/fontawesome-free/css/all.min.css"/>
     <script src="bootstrap/dist/js/bootstrap.min.js"></script>
+    <!--Google fonts -- the handwriting-style font used throughout my site-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playwrite+BE+VLG:wght@100..400&display=swap" rel="stylesheet">
-    <!--Loading CSS stylesheet AFTER botostrap, to override the bootstrap code-->
+    <!--Loading CSS stylesheet AFTER bootstrap, to override the bootstrap code and apply custom styling-->
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head> 
 
@@ -16,12 +19,14 @@
     <!--Added custom class header-navbar to call in CSS styling to only apply to navbar, not the footer as well-->
     <nav class="navbar navbar-expand-lg header-navbar">
       <div class="container-fluid">
+        <!--Links to the splash page-->
         <a class="navbar-brand" href="/">TrackIt</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <!--Each class uses an if-else on the page title: so when the current page matches, it is highlighted using "active" class from bootstrap-->
             <li class="nav-item">
               <% if(title=="TrackIt"){%>
               <a class="nav-link active" aria-current="page" href="/"> <i class="fa-solid fa-house"></i> Home</a>
@@ -47,6 +52,7 @@
         </div>
       </div>
     </nav>
+<!--Centred TrackIt logo shown under navbar on every page, styled fully using CSS as well-->
 <div class="text-center py-3">
     <img src="/images/TrackIt.png" style="height:130px; width: auto;">
 </div>
