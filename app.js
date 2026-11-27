@@ -1,5 +1,8 @@
+//Main configuration file
+
 //require .env configuration
 //Loads content from .env, which currently stores the MONGODB connection string
+//Password never appears in the code as a hardcoded value, keeping my info safe
 require('dotenv').config();
 const mongoose = require('mongoose'); 
 

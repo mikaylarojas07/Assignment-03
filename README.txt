@@ -1,68 +1,29 @@
 Mikayla Rojas Assignment-03 README file
 101023576
 
-Citations: 
-Bootstrap used for card, navbar, section formatting. 
+Citation #1: 
+Bootstrap code used for base styling for my tables, navbar, cards, footer, and form inputs (note that much of this code is adapted from the lectures)
+https://getbootstrap.com/
 
-Bootstrap navbar code (adapted from lecture) https://getbootstrap.com/docs/5.0/components/navbar/: 
-
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-        </li>
-      </ul>
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
-    </div>
-  </div>
-</nav>
-
-Bootstrap 6.0 Documentation used for:
+Citation #2: 
+Bootstrap 6.0 Documentation used for: https://getbootstrap.com/docs/6.0/content/tables/?utm_source=chatgpt.com
 .table{
   --bs-table-bg: #FFF7F2;
   --bs-table-hover-bg: #FFD6E4;
   border-color: #C2477A;
 }
 
-https://getbootstrap.com/docs/6.0/content/tables/?utm_source=chatgpt.com
-
-
+Citation #3: 
 Google Fonts embed code from: https://fonts.google.com/selection/embed
 
 PLEASE NOTE: I wrote my own CSS code, which can be seen in style.css
 
-The code below, specifically the ternary operator logic, was adapted from MDN: 
+Citation #4: 
+Ternary operator and 'selected' attribute logic for my <option> element was adapted from MDN: 
 Source 1: Understanding the ternary operator: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_operator
 Source 2: Using the 'selected' attribute for <option> element: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/option
 
-<div class="form-group">
-  <label for="priorityLevelSelect">Priority Level</label>
+EX: 
 <!--Using ternary operator on the select class to decide which default selected value to use when editing-->
 <!--If the existing value == Low, then make the 'Low' value selected-->
     <select class="form-control" id="priorityLevelSelect" name="priorityLevel" required>
@@ -70,4 +31,22 @@ Source 2: Using the 'selected' attribute for <option> element: https://developer
       <option value="Medium" <%= assignment.priorityLevel === 'Medium' ? 'selected' : '' %>>Medium</option>
       <option value="High" <%= assignment.priorityLevel === 'High' ? 'selected' : '' %>>High</option>
     </select>
-</div>
+
+Citation #5: 
+Stack Overflow code for using .env to secure MONGODB connection string and keep password private by storing .env in .gitignore
+https://stackoverflow.com/questions/62759524/using-dot-env-for-my-mongodb-username-password
+
+EXAMPLE CODE FROM STACK OVERFLOW: 
+In .env:
+MONGODB_URI=mongodb+srv://<username>:<password>@jons-thoughts.xpo8p.mongodb.net/jons-thoughts?retryWrites=true&w=majority
+In app.js: 
+mongoose.connect(process.env.MONGODB_URI)
+
+Stack Overflow code for converting date input to a formatted string (implemented on edit.ejs and list.ejs): 
+https://stackoverflow.com/questions/28729634/set-values-in-input-type-date-and-time-in-javascript/58252034?utm_source=chatgpt.com
+
+EXAMPLE CODE FROM STACK OVERFLOW: 
+let dateInputFormatted = tmp.toISOString().split('T')[0];
+
+Citation #6: 
+Fontawesome free icons used from https://www.npmjs.com/package/@fortawesome/fontawesome-free
