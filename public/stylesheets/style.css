@@ -1,7 +1,9 @@
 body{
   background-color: #fff7f2;
   color: #4A2040;
+  padding-bottom: 80px;
 }
+
 h1, .header-navbar {
   font-family: "Playwrite BE VLG", cursive;
 }
@@ -19,6 +21,11 @@ img{
   margin-top: 20px;
 }
 
+.btn-primary:hover, .btn-warning:hover{
+  background-color: #D6537D;
+  border-color: #D6537D; 
+}
+
 .btn-view{
   background-color: rgb(239, 125, 161);
 }
@@ -32,12 +39,27 @@ img{
   color:#4A2040;
 }
 
+.delete-btn:hover{
+  background-color: forestgreen;
+  border-color: #8FD0A8;
+}
+
+.edit-btn:hover{
+  background-color: rgb(208, 17, 208);
+  border-color: rgb(231, 187, 243);
+}
+
 .btn-back{
   background-color: #4A2040;
+  
 }
 
 form{
-  padding-top:10px;
+  padding: 40px;
+  border-radius: 10%;
+  background-color: pink;
+  max-width: 60%;
+  margin: 0 auto;
 }
 
 .header-navbar{
@@ -54,6 +76,20 @@ form{
   color:#4A2040
 }
 
+h1{
+  padding-bottom: 20px;
+}
 
-  
-  
+.table th{
+  background-color: #C2477A;
+  color: white;
+  border-color: #C2477A;
+
+}
+
+/* table properties from Bootstrap 6.0 Documentation*/
+.table{
+  --bs-table-bg: #FFF7F2;
+  --bs-table-hover-bg: #FFD6E4;
+  border-color: #C2477A;
+}

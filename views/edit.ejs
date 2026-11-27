@@ -4,10 +4,12 @@
     <div class="row mb-4">
         <div class="offset-md-3 col-md-6 text-center">
             <!--Redirects users back to lost item logs -> /items (list.ejs)-->
-            <a href="/assignments" class="btn btn-primary" role="button"> <i class="fas fa-arrow-left"></i> Back to Assignments</a>
+            <a href="/assignments" class="btn btn-primary btn-back" role="button"> <i class="fas fa-arrow-left"></i> Back to Assignments</a>
         </div>
       </div>
+            <div class="text-center">
             <h1>Edit Assignment</h1> <!--New header to establish difference from create page-->
+            </div>
             <form class="form" method="post">
                 <!--New property "value" to populate the current value associated with the object, for simple and quick editing-->
                 <div class="form-group">
@@ -44,6 +46,8 @@
                 </div>
                 <div class="form-group">
                     <label for="priorityLevelSelect">Priority Level</label>
+
+
                     <input type="email" class="form-control" id="priorityLevelSelect"
                     placeholder="Low, medium, or high?"
                     name="priorityLevel" 

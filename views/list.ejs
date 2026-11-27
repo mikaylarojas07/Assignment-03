@@ -13,8 +13,8 @@
                 <tr>
                     <th class="text-center col-2">Type of Assignment</th>
                     <th class="text-center col-2">Course Code</th>
-                    <th class="text-center col-1">Description</th>
-                    <th class="col-4">Due Date</th>
+                    <th class="text-center col-5">Description</th>
+                    <th class="col-1">Due Date</th>
                     <th class="text-center col-1">Priority Level</th>
                 </tr>
                 <!--Columns-->
@@ -22,9 +22,9 @@
                     <tr>
                         <td class="text-center col-2"><%= Assignmentlist[count].type %></td>
                         <td class="text-center col-2"><%= Assignmentlist[count].courseCode %></td>
-                        <td class="text-center col-1"><%= Assignmentlist[count].description %></td>
+                        <td class="text-center col-5"><%= Assignmentlist[count].description %></td>
                         <!--from stack overflow, see readme-->
-                        <td class="col-4"><%= Assignmentlist[count].dueDate.toISOString().split('T')[0] %></td>
+                        <td class="col-1"><%= Assignmentlist[count].dueDate.toISOString().split('T')[0] %></td>
                         <td class="text-center col-1"><%= Assignmentlist[count].priorityLevel %></td>
                         
                         <td class="text-center col-1">
@@ -37,7 +37,7 @@
                             <!--Added custom class delete-btn to apply CSS styling to this unique button only-->
                             <a href="/assignments/delete/<%= Assignmentlist[count]._id %>" 
                                 class="btn btn-primary btn-sm delete-btn"
-                                onclick="return confirm('Are you sure?')">
+                                onclick="return confirm('Are you sure you want to mark this assignment as Done? This will remove the assignment from the database.')">
                                 
                                 <i class="fas fa-check"></i> Mark as Done</a>
                         </td>
