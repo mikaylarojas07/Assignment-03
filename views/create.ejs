@@ -1,8 +1,11 @@
+<!--Form for adding a new assignment-->
+
 <%- include partials/header.ejs %>
 
 <div class="container mb-5 pb-5"> <!--Adds margins and padding to the bottom of the container div, Bootstrap styling-->
     <div class="row mb-4">
         <div class="offset-md-3 col-md-6 text-center">
+            <!--Button to go back to the list page-->
             <a href="/assignments" class="btn btn-primary btn-back" role="button"> <i class="fas fa-arrow-left"></i> Back to Assignments</a>
         </div>
       </div>
@@ -30,13 +33,14 @@
                 </div>
                 <div class="form-group">
                     <label for="dueDate">Due Date</label>
+                    <!--type="date" gives user a calendar picker and sends the value as yyyy-mm-dd-->
                     <input type="date" class="form-control" id="dueDate"
                     name="dueDate" required>
                 </div>
-                <!--cite or find lecture-->
                 <div class="form-group">
                     <label for="priorityLevel">Priority Level</label>
                     <select class="form-control" id="priorityLevel" name="priorityLevel" required>
+                        <!--using a dropdown menu to restrict the priority level value to three choices-->
                         <option value="Low">Low</option>
                         <option value="Medium">Medium</option>
                         <option value="High">High</option>
@@ -48,6 +52,7 @@
                     <!--Icons from fontawesome-free-->
                     <i class="fas fa-edit"></i> Add Assignment
                 </button>
+                <!--Cancel returns to the list without saving anything-->
                 <a href="/assignments" class="btn btn-warning">
                     <i class="fas fa-undo"></i>Cancel
                 </a>
