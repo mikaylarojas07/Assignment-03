@@ -43,6 +43,10 @@ Bootstrap navbar code (adapted from lecture) https://getbootstrap.com/docs/5.0/c
   </div>
 </nav>
 
+Bootstrap 6.0 Documentation used for lines 91-93 in style.CSS. 
+https://getbootstrap.com/docs/6.0/content/tables/?utm_source=chatgpt.com
+
+
 Google Fonts embed code from: https://fonts.google.com/selection/embed
 
 PLEASE NOTE: I wrote my own CSS code, which can be seen in style.css
