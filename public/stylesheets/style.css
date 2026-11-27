@@ -1,9 +1,14 @@
+/*Creating my own custom CSS stylesheet for TrackIt (no 3rd party theme). 
+it is loaded AFTER bootstrap so the rules here override bootstrap's defaults*/
+
+/*Page-wide settings: cream background, plum text, and extra space at the bottom so fixed-navbar doesn't cover content*/
 body{
   background-color: #fff7f2;
   color: #4A2040;
   padding-bottom: 80px;
 }
 
+/*Applying the cursive Google Font loaded in partials/header.ejs*/
 h1, .header-navbar, h2, h4 {
   font-family: "Playwrite BE VLG", cursive;
 }
@@ -15,11 +20,13 @@ h2{
   margin-bottom: 20px;
 }
 
+/*Styling the logo image: pink border, circle*/
 img{
   border: 3px solid pink;
   border-radius: 50%;
 }
 
+/*Styling the main action buttons (add, update, submit, cancel)*/
 .btn-primary, .btn-warning{
   background-color: #C2477A;
   border-width: 3px;
@@ -28,11 +35,13 @@ img{
   margin-top: 20px;
 }
 
+/*Change colour slightly when hovering*/
 .btn-primary:hover, .btn-warning:hover{
   background-color: #D6537D;
   border-color: #D6537D; 
 }
 
+/*Custom classes added to specific buttons in HTML so each can be styled on its own*/
 .btn-view{
   background-color: rgb(239, 125, 161);
 }
@@ -41,6 +50,7 @@ img{
   background-color: rgb(239, 125, 161);
 }
 
+/*This is the "mark as done" button: green, then darker green on hover*/
 .delete-btn{
   background-color: #8FD0A8;
   color:#4A2040;
@@ -51,16 +61,13 @@ img{
   border-color: #8FD0A8;
 }
 
-.edit-btn:hover{
-  background-color: rgb(208, 17, 208);
-  border-color: rgb(231, 187, 243);
-}
-
+/*Back to Assignments button*/
 .btn-back{
   background-color: #4A2040;
-  
 }
 
+/*Create and edit forms: padded pink with rounded corners, 
+limited to 60% width and centred using margin:auto*/
 form{
   padding: 40px;
   border-radius: 10%;
@@ -69,23 +76,28 @@ form{
   margin: 0 auto;
 }
 
-.header-navbar{
+/*Header and footer navbar colours*/
+.navbar{
   background-color: rgb(231, 187, 243);
 }
 
-.footer-navbar{
-  background-color: rgb(231, 187, 243);
-}
-
+/*Update button base colour*/
 .edit-btn{
   background-color: rgb(231, 187, 243);
   color:#4A2040
+}
+
+/*Update button hover colour*/
+.edit-btn:hover{
+  background-color: rgb(208, 17, 208);
+  border-color: rgb(231, 187, 243);
 }
 
 h1{
   padding-bottom: 20px;
 }
 
+/*Table header cells: rose background and white text*/
 .table th{
   background-color: #C2477A;
   color: white;
@@ -93,6 +105,7 @@ h1{
 }
 
 /* table properties from Bootstrap 6.0 Documentation*/
+/* changing table coloring using --bs-table-bg and --bs-table-hover-bg*/
 .table{
   --bs-table-bg: #FFF7F2;
   --bs-table-hover-bg: #FFD6E4;
@@ -100,14 +113,20 @@ h1{
 
 }
 
+/*Splash page: dark plum header of welcome card*/
 .card-header{
   background-color: #4A2040;
   color: #FFF7F2;
   padding-top: 20px;
 }
 
+/*Body of the welcome card on the splash page*/
+.card-welcome{
+  background-color: rgb(252, 237, 255);
+}
 
-
+/*Splash page: the 3 "Key features" cards, with a thick plum border and rounded edges*/
+/*margin:auto centres each card within the flex row*/
 .card-feature{
   background-color: #FFD6E4;
   border-width: 5px;
@@ -116,11 +135,8 @@ h1{
   margin: auto;
 }
 
+/*feature cards turn rose with white text on hover*/
 .card-feature:hover{
   background-color: #C2477A;
   color: white;
-}
-
-.card-welcome{
-  background-color: rgb(252, 237, 255);
 }
