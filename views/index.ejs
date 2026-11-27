@@ -1,21 +1,27 @@
+<!--Splash/landing page for TrackIt. Displays welcome card and key functionality-->
+
 <%- include partials/header.ejs %>
 <div class="container">
    <div class="card">
+    <!--Welcome card: heading, short tagline, and two buttons "view" and "add"-->
         <div class="card-header">
             <h1><%= title %></h1>
         </div>
   <div class="card-body card-welcome">
     <h5 class="card-title">Stay on top of your schoolwork with TrackIt.</h5>
     <p class="card-text">Keep track of every assignment, test, and quiz - all in one place.</p>
+    <!--Link to the list page (read) an create form (Create)-->
     <a href="/assignments" class="btn btn-primary btn-view">View Assignments</a>
     <a href="/assignments/create" class="btn btn-primary btn-add">Add Assignment</a>
   </div>
 </div>
 
+<!--Centering the text-->
 <div class="text-center">
 <h2>Key features</h2>
 </div>
 
+<!--Key features cards-->
 <div class="features d-flex flex-wrap">
 
 <div class="card card-feature">
