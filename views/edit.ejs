@@ -1,3 +1,5 @@
+<!--Form for changing the contents of an existing assignment-->
+
 <%- include partials/header.ejs %>
 <container class="row offset-md-3"></container>
 <div class="container mb-5 pb-5">
@@ -29,6 +31,7 @@
                     required></input>
                 </div>
                 <div class="form-group">
+                    <!--textarea field has no value attribute, so the current text goes between its tags-->
                     <label for="assignmentDescription">Assignment Description</label>
                     <textarea type="text" class="form-control" id="assignmentDescription"
                     placeholder="What are the details of the test/assignment/report?"
