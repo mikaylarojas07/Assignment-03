@@ -4,8 +4,15 @@ body{
   padding-bottom: 80px;
 }
 
-h1, .header-navbar {
+h1, .header-navbar, h2, h4 {
   font-family: "Playwrite BE VLG", cursive;
+}
+
+
+h2{
+  padding: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 img{
@@ -63,12 +70,11 @@ form{
 }
 
 .header-navbar{
-  background-color: peachpuff;
+  background-color: rgb(231, 187, 243);
 }
 
 .footer-navbar{
-  background-color: peachpuff;
-  font-family: serif;
+  background-color: rgb(231, 187, 243);
 }
 
 .edit-btn{
@@ -84,7 +90,6 @@ h1{
   background-color: #C2477A;
   color: white;
   border-color: #C2477A;
-
 }
 
 /* table properties from Bootstrap 6.0 Documentation*/
@@ -93,4 +98,29 @@ h1{
   --bs-table-hover-bg: #FFD6E4;
   border-color: #C2477A;
 
+}
+
+.card-header{
+  background-color: #4A2040;
+  color: #FFF7F2;
+  padding-top: 20px;
+}
+
+
+
+.card-feature{
+  background-color: #FFD6E4;
+  border-width: 5px;
+  border-radius: 20%;
+  border-color: #4A2040;
+  margin: auto;
+}
+
+.card-feature:hover{
+  background-color: #C2477A;
+  color: white;
+}
+
+.card-welcome{
+  background-color: rgb(252, 237, 255);
 }

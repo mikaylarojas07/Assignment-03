@@ -1,9 +1,49 @@
 <%- include partials/header.ejs %>
 <div class="container">
-    <h1><%= title %></h1>
-    <p>Keep track of every assignment, test, and quiz - all in one place.</p>
+   <div class="card">
+        <div class="card-header">
+            <h1><%= title %></h1>
+        </div>
+  <div class="card-body card-welcome">
+    <h5 class="card-title">Stay on top of your schoolwork with TrackIt.</h5>
+    <p class="card-text">Keep track of every assignment, test, and quiz - all in one place.</p>
     <a href="/assignments" class="btn btn-primary btn-view">View Assignments</a>
     <a href="/assignments/create" class="btn btn-primary btn-add">Add Assignment</a>
+  </div>
+</div>
+
+<div class="text-center">
+<h2>Key features</h2>
+</div>
+
+<div class="features d-flex flex-wrap">
+
+<div class="card card-feature">
+  <div class="card-body text-center">
+    <i class="fa-solid fa-circle-plus"></i>
+    <h4 class="card-title">Add</h4>
+    <p class="card-text">Create new assignments</p>
+  </div>
+</div>
+
+<div class="card card-feature">
+  <div class="card-body text-center">
+    <i class="fa-solid fa-calendar-days"></i>
+    <h4 class="card-title">Track</h4>
+    <p class="card-text">Manage tests, assignments, and quizzes</p>
+  </div>
+</div>
+
+<div class="card card-feature">
+  <div class="card-body text-center">
+    <i class="fa-solid fa-list-check"></i>
+    <h4 class="card-title">View</h4>
+    <p class="card-text">See your assignments</p>
+  </div>
+</div>
 
 </div>
+</div>
+
+
 <%- include partials/footer.ejs %>

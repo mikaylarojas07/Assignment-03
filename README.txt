@@ -43,7 +43,13 @@ Bootstrap navbar code (adapted from lecture) https://getbootstrap.com/docs/5.0/c
   </div>
 </nav>
 
-Bootstrap 6.0 Documentation used for lines 91-93 in style.CSS. 
+Bootstrap 6.0 Documentation used for:
+.table{
+  --bs-table-bg: #FFF7F2;
+  --bs-table-hover-bg: #FFD6E4;
+  border-color: #C2477A;
+}
+
 https://getbootstrap.com/docs/6.0/content/tables/?utm_source=chatgpt.com
 
 
