@@ -10,6 +10,7 @@ const mongoose = require('mongoose');
 //Connects to the MongoDB cluster using the connection string in .env
 mongoose.connect(process.env.MONGODB_URI);
 
+//prints message in the terminal when the connection succeeds/fails
 mongoose.connection.on('connected', () => {
     console.log('MongoDB Connected');
 });
@@ -24,14 +25,17 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+//import the route files
 var indexRouter = require('./routes/index');
 var assignmentsRouter = require('./routes/assignments');
 
 var usersRouter = require('./routes/users');
 
+//create Express application
 var app = express();
 
 // view engine setup
+//tells us that page templates live in "views" folder, and are written in ejs
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
@@ -40,8 +44,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+//serve node_modules folder, so page can load Bootstrap and fontawesome.
 app.use(express.static(path.join(__dirname, 'node_modules')));
 
+//Mounting the routers: URLs starting with / use index.js, and /assignments use assignments.js
 app.use('/', indexRouter);
 app.use('/assignments', assignmentsRouter);
 app.use('/users', usersRouter);
