@@ -50,3 +50,18 @@ https://getbootstrap.com/docs/6.0/content/tables/?utm_source=chatgpt.com
 Google Fonts embed code from: https://fonts.google.com/selection/embed
 
 PLEASE NOTE: I wrote my own CSS code, which can be seen in style.css
+
+The code below, specifically the ternary operator logic, was adapted from MDN: 
+Source 1: Understanding the ternary operator: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_operator
+Source 2: Using the 'selected' attribute for <option> element: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/option
+
+<div class="form-group">
+  <label for="priorityLevelSelect">Priority Level</label>
+<!--Using ternary operator on the select class to decide which default selected value to use when editing-->
+<!--If the existing value == Low, then make the 'Low' value selected-->
+    <select class="form-control" id="priorityLevelSelect" name="priorityLevel" required>
+      <option value="Low" <%= assignment.priorityLevel === 'Low' ? 'selected' : '' %>>Low</option>
+      <option value="Medium" <%= assignment.priorityLevel === 'Medium' ? 'selected' : '' %>>Medium</option>
+      <option value="High" <%= assignment.priorityLevel === 'High' ? 'selected' : '' %>>High</option>
+    </select>
+</div>

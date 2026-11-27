@@ -46,13 +46,13 @@
                 </div>
                 <div class="form-group">
                     <label for="priorityLevelSelect">Priority Level</label>
-
-
-                    <input type="email" class="form-control" id="priorityLevelSelect"
-                    placeholder="Low, medium, or high?"
-                    name="priorityLevel" 
-                    value="<%=assignment.priorityLevel%>"
-                    required>
+                    <!--Using ternary operator on the select class to decide which default selected value to use when editing-->
+                    <!--If the existing value == Low, then make the 'Low' value selected-->
+                    <select class="form-control" id="priorityLevelSelect" name="priorityLevel" required>
+                        <option value="Low" <%= assignment.priorityLevel === 'Low' ? 'selected' : '' %>>Low</option>
+                        <option value="Medium" <%= assignment.priorityLevel === 'Medium' ? 'selected' : '' %>>Medium</option>
+                        <option value="High" <%= assignment.priorityLevel === 'High' ? 'selected' : '' %>>High</option>
+                    </select>
                 </div>
                 <!--Changed text on submit button to "Update"-->
                 <button class="btn btn-primary" type="submit">
