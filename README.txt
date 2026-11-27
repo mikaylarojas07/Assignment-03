@@ -61,6 +61,6 @@ My code (adapted from Stack):
       onclick="return confirm('Are you sure you want to mark this assignment as Done? This will remove the assignment from the database.')">
       <i class="fas fa-check"></i> Mark as Done</a>
   </td>
-  
-Citation #6: 
+
+Citation #8 
 Fontawesome free icons used from https://www.npmjs.com/package/@fortawesome/fontawesome-free
