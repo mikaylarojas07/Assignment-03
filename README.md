@@ -1,6 +1,8 @@
 Mikayla Rojas Assignment-03 README file
 101023576
 
+All citations are below, with code explanations and accurate links. 
+
 Citation #1: 
 Bootstrap code used for base styling for my tables, navbar, cards, footer, and form inputs (note that much of this code is adapted from the lectures)
 https://getbootstrap.com/
