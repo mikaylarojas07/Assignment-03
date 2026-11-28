@@ -6,7 +6,7 @@ Bootstrap code used for base styling for my tables, navbar, cards, footer, and f
 https://getbootstrap.com/
 
 Citation #2: 
-Bootstrap 6.0 Documentation used for: https://getbootstrap.com/docs/6.0/content/tables/?utm_source=chatgpt.com
+Bootstrap 6.0 Documentation used for: https://getbootstrap.com/docs/6.0/content/tables/
 .table{
   --bs-table-bg: #FFF7F2;
   --bs-table-hover-bg: #FFD6E4;
@@ -44,7 +44,7 @@ mongoose.connect(process.env.MONGODB_URI)
 
 Citation #6: 
 Stack Overflow code for converting date input to a formatted string (implemented on edit.ejs and list.ejs): 
-https://stackoverflow.com/questions/28729634/set-values-in-input-type-date-and-time-in-javascript/58252034?utm_source=chatgpt.com
+https://stackoverflow.com/questions/28729634/set-values-in-input-type-date-and-time-in-javascript/58252034?
 
 EXAMPLE CODE FROM STACK OVERFLOW: 
 let dateInputFormatted = tmp.toISOString().split('T')[0];
